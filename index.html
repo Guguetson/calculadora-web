@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="botao-tema">
+        <div class="calculadora">
+            <div class="visor">
+                <!-- visor da calculadora -->
+                <p id="resultado"></p>
+                <!-- parágrafo para exibir o resultado -->
+            </div>
+            <div id="historico"></div>
+            <button id="modo-tema" onclick="alternarTema()">Modo Noturno🌑</button>
+             <!-- botão para alternar o tema -->
+            <table>
+                <!-- tabela para os botões da calculadora -->
+                <tr>
+                    <td><button class="botao-operacao" onclick="limpartudo()">AC</button></td>
+                    <td><button class="botao-operacao" onclick="voltar()">DE</button></td>
+                    <td><button class="botao-operacao" onclick="inserir('/')">/</button></td>
+                    <td><button class="botao-operacao" onclick="inserir('*')">x</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="inserir('7')">7</button></td>
+                    <td><button class="botao" onclick="inserir('8')">8</button></td>
+                    <td><button class="botao" onclick="inserir('9')">9</button></td>
+                    <td><button class="botao-operacao" onclick="inserir('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="inserir('4')">4</button></td>
+                    <td><button class="botao" onclick="inserir('5')">5</button></td>
+                    <td><button class="botao" onclick="inserir('6')">6</button></td>
+                    <td><button class="botao-operacao" onclick="inserir('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="inserir('1')">1</button></td>
+                    <td><button class="botao" onclick="inserir('2')">2</button></td>
+                    <td><button class="botao" onclick="inserir('3')">3</button></td>
+                    <td rowspan="2"><button class="botao-operacao" style="height: 150px;" onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 87%;" onclick="inserir('0')">0</button></td>
+                    <td><button class="botao-operacao" onclick="inserir('.')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
